@@ -16,4 +16,8 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'index'])->name('home');
 
-Route::post('/store', [PostController::class, 'store'])->name('store');
+Route::post('/comment', [PostController::class, 'store'])->name('store');
+
+Route::get('/map', function(){
+	return view('map');
+});
